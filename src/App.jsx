@@ -4,6 +4,7 @@ import Hero from "./components/Hero/Hero";
 import Bbagus from "./components/bukuBagus/Bbagus";
 import Banner from "./components/Banner/Banner";
 import BannerPenjualanMisalkanAppstoreAtauGooglePlay from "./components/BannerPenjualanMisalkanAppstoreAtauGooglePlay/BannerPenjualanMisalkanAppstoreAtauGooglePlay";
+import Topbooks from "./components/TopBooks/Topbooks";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Bbagus />
         <Banner />
         <BannerPenjualanMisalkanAppstoreAtauGooglePlay />
+        <Topbooks />
       </div>
     </>
   );
