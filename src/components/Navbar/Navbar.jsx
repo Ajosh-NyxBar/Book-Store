@@ -27,7 +27,7 @@ const DropdownLink = [
     title: "New Arrival",
     link: "/#",
   },
-  {
+  { 
     id: 3,
     title: "Best Selling",
     link: "/#",
