@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
 import Bbagus from "./components/bukuBagus/Bbagus";
+import Banner from "./components/Banner/Banner";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
         <Navbar />
         <Hero />
         <Bbagus />
+        <Banner />
       </div>
     </>
   );
