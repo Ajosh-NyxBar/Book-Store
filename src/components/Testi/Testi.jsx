@@ -8,19 +8,19 @@ const testData = [
   {
     id: 1,
     name: "Ajosh",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+    text: "Saya sangat puas dengan layanan yang diberikan. Buku-buku yang saya beli sangat berkualitas.",
     img: ajosh,
   },
   {
     id: 2,
     name: "Wang",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+    text: "Pengiriman cepat dan buku-buku yang saya terima dalam kondisi sangat baik. Terima kasih!",
     img: rizqi,
   },
   {
     id: 3,
     name: "Alicia",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+    text: "Saya merekomendasikan toko ini kepada teman-teman saya. Pelayanan yang sangat memuaskan!",
     img: alicia,
   },
 ];
@@ -57,7 +57,7 @@ const Testi = () => {
       {
         breakpoint: 640,
         settings: {
-          slidesToShow: 1, 
+          slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
@@ -84,7 +84,7 @@ const Testi = () => {
         <div>
           <Slider {...setting}>
             {testData.map((item) => (
-              <div key={item.id}>
+              <div key={item.id} className="my-6">
                 <div
                   className="flex flex-col gap-4 shadow-lg py-8 px-6 mx-4 rounded-xl
                  dark:bg-gray-800 bg-primary/10 relative"
@@ -103,7 +103,9 @@ const Testi = () => {
                         {item.name}
                       </h1>
                     </div>
-                    <p className="absolute top-0 right-0 font-serif text-9xl z-10 text-black/20">,,</p>
+                    <p className="absolute top-0 right-0 font-serif text-9xl z-10 text-black/20">
+                      ,,
+                    </p>
                   </div>
                 </div>
               </div>

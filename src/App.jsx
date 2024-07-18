@@ -6,6 +6,7 @@ import Banner from "./components/Banner/Banner";
 import BannerPenjualanMisalkanAppstoreAtauGooglePlay from "./components/BannerPenjualanMisalkanAppstoreAtauGooglePlay/BannerPenjualanMisalkanAppstoreAtauGooglePlay";
 import Topbooks from "./components/TopBooks/Topbooks";
 import Testi from "./components/Testi/Testi";
+import Unhabitatislandsurvivalfooter from "./components/puter/unhabitatislandsurvivalfooter";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <BannerPenjualanMisalkanAppstoreAtauGooglePlay />
         <Topbooks />
         <Testi />
+        <Unhabitatislandsurvivalfooter />
       </div>
     </>
   );
