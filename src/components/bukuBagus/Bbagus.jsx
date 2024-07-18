@@ -36,17 +36,17 @@ const Bbagus = () => {
       <div className="py-10">
         <div className="container">
           {/* Header section */}
-          <div className="text-center mb-20 max-w-[400px] mx-auto">
-            <p className="text-sm bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-              Trending Books
-            </p>
-            <h1 className="text-3xl font-bold">Best Books</h1>
-            <p className="text-xs text-gray-400">
-              Temukan buku-buku terbaik yang sedang trending saat ini. Dari ilmu
-              keislaman hingga solusi bisnis, kami memiliki koleksi yang beragam
-              untuk memenuhi kebutuhan bacaan Anda.
-            </p>
-          </div>
+            <div className="text-center mb-20 max-w-[400px] mx-auto">
+              <p className="text-sm bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+                Trending Books
+              </p>
+              <h1 className="text-3xl font-bold">Best Books</h1>
+              <p className="text-xs text-gray-400">
+                Temukan buku-buku terbaik yang sedang trending saat ini. Dari ilmu
+                keislaman hingga solusi bisnis, kami memiliki koleksi yang beragam
+                untuk memenuhi kebutuhan bacaan Anda.
+              </p>
+            </div>
           {/* Card Section */}
 
           <div
