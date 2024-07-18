@@ -12,7 +12,7 @@ import "aos/dist/aos.css";
 import Popup from "./components/Popup/Popup";
 
 const App = () => {
-  const [order, setOrder] = useState(false);
+  const [order, setOrder] = useState(false  );
 
   const handleOrderPopup = () => {
     setOrder(!order);

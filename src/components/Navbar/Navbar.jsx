@@ -27,13 +27,13 @@ const DropdownLink = [
     title: "New Arrival",
     link: "/#",
   },
-  { 
+  {
     id: 3,
     title: "Best Selling",
     link: "/#",
   },
 ];
-const Navbar = () => {
+const Navbar = ({ handleOrderPopup }) => {
   return (
     <div className="shadow-lg bg-white dark:bg-gray-800 dark:text-white duration-200">
       <div className="container py-3 sm:py-0">
@@ -84,7 +84,10 @@ const Navbar = () => {
                 </div>
               </li>
             </ul>
-            <button className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-1 rounded-full flex items-center gap-3 hover:scale-105 duration-300">
+            <button
+              onClick={handleOrderPopup}
+              className="bg-gradient-to-r from-primary to-secondary text-white px-4 py-1 rounded-full flex items-center gap-3 hover:scale-105 duration-300"
+            >
               Order
               <FaCartShopping className="text-xl text-white drop-shadow-sm cursor-pointer" />
             </button>

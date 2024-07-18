@@ -31,7 +31,7 @@ const imgList = [
   },
 ];
 
-const Hero = () => {
+const Hero = ({handleOrderPopup}) => {
   const [imageId, setImageId] = useState(book1);
   const [penulis, setPenulis] = useState("Dr. Robingatun. M.Pd.I., dkk");
   const [title, setTitle] = useState("Ilmu Ilmu Keislaman");
@@ -81,6 +81,7 @@ const Hero = () => {
               </p>
               <div>
                 <button
+                  onClick={handleOrderPopup}
                   data-aos="zoom-in"
                   className="bg-gradient-to-r from-primary to-secondary
                  text-white px-4 py-2 rounded-full mt-4 hover:scale-105 duration-200"

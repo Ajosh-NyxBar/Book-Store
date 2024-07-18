@@ -53,7 +53,7 @@ const dataBuku = [
   },
 ];
 
-const Topbooks = () => {
+const Topbooks = ({ handleOrderPopup }) => {
   const [selectedBook, setSelectedBook] = useState(null);
 
   const handleBookClick = (book) => {
@@ -185,7 +185,7 @@ const Topbooks = () => {
                 px-5 rounded-full hover:scale-105 duration-300 hover:bg-white hover:text-primary hover:border hover:border-primary
                 dark:bg-secondary dark:text-white"
             >
-              <button>Order</button>
+              <button onClick={handleOrderPopup}>Order</button>
             </div>
           </div>
         </div>

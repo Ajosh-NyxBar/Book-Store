@@ -30,7 +30,8 @@ const imgList = [
       "Buku ini mengisahkan cerita misteri yang penuh dengan ketegangan dan intrik. Sangat cocok bagi para penggemar genre thriller dan suspense. Cerita ini mengikuti perjalanan seorang detektif yang mencoba memecahkan serangkaian pembunuhan misterius. Dengan plot yang penuh liku dan karakter yang kompleks, buku ini akan membuat pembaca terus terjaga hingga halaman terakhir.",
   },
 ];
-const Bbagus = () => {
+
+const Bbagus = ({ handleOrderPopup }) => {
   return (
     <>
       <div className="py-10">
@@ -74,9 +75,9 @@ const Bbagus = () => {
                 key={item.id}
                 className="rounded-2xl bg-white dark:bg-gray-800 hover:bg-primary
                  dark:hover:bg-primary hover:text-white relative
-                  shadow-xl duration-high group max-w-[300px]:"
+                  shadow-xl duration-high group max-w-[300px] w-full mx-4 my-14"
               >
-                <div className="h-[100px]">
+                <div className="h-[100px] flex justify-center items-center">
                   <img
                     src={item.image}
                     alt={item.title}
@@ -99,6 +100,7 @@ const Bbagus = () => {
                     {item.description}
                   </p>
                   <button
+                    onClick={handleOrderPopup}
                     className="bg-primary to-secondary text-white px-4 py-2 rounded-full mt-4
                   hover:scale-105 duration-200 group-hover:bg-white group-hover:text-primary"
                   >
