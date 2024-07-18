@@ -6,6 +6,7 @@ import {
   FaMobileAlt,
   FaYoutube,
 } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const footerLinks = [
   {
@@ -47,7 +48,13 @@ const Unhabitatislandsurvivalfooter = () => {
       <div className="container">
         <div className="grid md:grid-cols-3 py-5">
           {/* company detail */}
-          <div className="py-8 px-4">
+          <motion.div
+            className="py-8 px-4"
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
             <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3">
               Ajosh Book
             </h1>
@@ -76,85 +83,87 @@ const Unhabitatislandsurvivalfooter = () => {
                 <FaYoutube className="text-3xl" />
               </a>
             </div>
-          </div>
+          </motion.div>
 
           {/* Links Section */}
           <div className="grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10">
-            <div>
-              <div className="py-8 px-4">
-                <h1
-                  className="text-xl font-bold sm:text-left text-justify
-                mb-3"
-                >
-                  {footerLinks[0].title}
-                </h1>
-                <ul className="flex-col gap-3 flex">
-                  {footerLinks[0].links.map((link) => (
-                    <li
-                      key={link.title}
-                      className="cursor-pointer hover:translate-x-1 duration-300 hover:text-primary
-                    space-x-1 text-gray-500"
-                    >
-                      <a href={link.link}>
-                        <span>&rarr;</span> {link.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div>
-              <div className="py-8 px-4">
-                <h1
-                  className="text-xl font-bold sm:text-left text-justify
-                mb-3"
-                >
-                  {footerLinks2[0].title}
-                </h1>
-                <ul className="flex-col gap-3 flex">
-                  {footerLinks2[0].links.map((link) => (
-                    <li
-                      key={link.title}
-                      className="cursor-pointer hover:translate-x-1 duration-300 hover:text-primary
-                    space-x-1 text-gray-500"
-                    >
-                      <a href={link.link}>
-                        <span>&rarr;</span> {link.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-            <div>
-              <div className="py-8 px-4">
-                <h1
-                  className="text-xl font-bold sm:text-left text-justify
-                mb-3"
-                >
-                  {footerLinks3[0].title}
-                </h1>
-                <ul className="flex-col gap-3 flex">
-                  {footerLinks3[0].links.map((link) => (
-                    <li
-                      key={link.title}
-                      className="cursor-pointer hover:translate-x-1 duration-300 hover:text-primary
-                    space-x-1 text-gray-500"
-                    >
-                      <a href={link.link}>
-                        <span>&rarr;</span> {link.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            <motion.div
+              className="py-8 px-4"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              <h1 className="text-xl font-bold sm:text-left text-justify mb-3">
+                {footerLinks[0].title}
+              </h1>
+              <ul className="flex-col gap-3 flex">
+                {footerLinks[0].links.map((link) => (
+                  <li
+                    key={link.name}
+                    className="cursor-pointer hover:translate-x-1 duration-300 hover:text-primary space-x-1 text-gray-500"
+                  >
+                    <a href={link.link}>
+                      <span>&rarr;</span> {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+            <motion.div
+              className="py-8 px-4"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              <h1 className="text-xl font-bold sm:text-left text-justify mb-3">
+                {footerLinks2[0].title}
+              </h1>
+              <ul className="flex-col gap-3 flex">
+                {footerLinks2[0].links.map((link) => (
+                  <li
+                    key={link.name}
+                    className="cursor-pointer hover:translate-x-1 duration-300 hover:text-primary space-x-1 text-gray-500"
+                  >
+                    <a href={link.link}>
+                      <span>&rarr;</span> {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+            <motion.div
+              className="py-8 px-4"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              viewport={{ once: true, amount: 0.5 }}
+            >
+              <h1 className="text-xl font-bold sm:text-left text-justify mb-3">
+                {footerLinks3[0].title}
+              </h1>
+              <ul className="flex-col gap-3 flex">
+                {footerLinks3[0].links.map((link) => (
+                  <li
+                    key={link.name}
+                    className="cursor-pointer hover:translate-x-1 duration-300 hover:text-primary space-x-1 text-gray-500"
+                  >
+                    <a href={link.link}>
+                      <span>&rarr;</span> {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
           </div>
         </div>
         {/* copiright section */}
         <div>
           <div className="border-t-2 border-gray-300/50">
-            <p className="text-center py-10">Copiright &copy; 2024 Ajosh Book. All rights reserved.</p>
+            <p className="text-center py-10">
+              Copiright &copy; 2024 Ajosh Book. All rights reserved.
+            </p>
           </div>
         </div>
       </div>

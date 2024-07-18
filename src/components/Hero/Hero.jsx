@@ -61,15 +61,27 @@ const Hero = () => {
               className="flex flex-col justify-center gap-4 
             pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1"
             >
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold">
+              <h1
+                data-aos="zoom-out"
+                data-aos-duration="500"
+                className="text-5xl sm:text-6xl lg:text-7xl font-bold "
+              >
                 {title}
                 <p className="bg-clip-text text-transparent bg-gradient-to-b from-primary text-right text-sm to-secondary">
                   by {penulis}
                 </p>
               </h1>
-              <p className="text-sm">{description}</p>
+              <p
+                className="text-sm"
+                data-aos="slide-up"
+                data-aos-duration="500"
+                data-aos-delay="100"
+              >
+                {description}
+              </p>
               <div>
                 <button
+                  data-aos="zoom-in"
                   className="bg-gradient-to-r from-primary to-secondary
                  text-white px-4 py-2 rounded-full mt-4 hover:scale-105 duration-200"
                 >
@@ -83,6 +95,8 @@ const Hero = () => {
               <div className="h-[300px] sm:h-[450px] overflow-hidden flex justify-center items-center">
                 <img
                   src={imageId}
+                  data-aos="zoom-in"
+                  data-aos-once="true"
                   alt=""
                   className="w-[300px] h-[300px] sm:h-[450px] sm:w-[450px] object-contain mx-auto"
                 />
@@ -94,6 +108,8 @@ const Hero = () => {
               >
                 {imgList.map((item) => (
                   <img
+                    data-aos="zoom-in"
+                    data-aos-once="true"
                     key={item.id}
                     src={item.image}
                     alt=""

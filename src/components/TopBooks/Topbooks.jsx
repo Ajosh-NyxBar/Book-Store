@@ -3,6 +3,7 @@ import book1 from "../../assets/book1.png";
 import book2 from "../../assets/book2.webp";
 import book3 from "../../assets/book3.png";
 import { FaStar } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const dataBuku = [
   {
@@ -51,13 +52,20 @@ const dataBuku = [
       "Buku ini mengisahkan cerita misteri yang penuh dengan ketegangan dan intrik. Sangat cocok bagi para penggemar genre thriller dan suspense. Cerita ini mengikuti perjalanan seorang detektif yang mencoba memecahkan serangkaian pembunuhan misterius. Dengan plot yang penuh liku dan karakter yang kompleks, buku ini akan membuat pembaca terus terjaga hingga halaman terakhir.",
   },
 ];
+
 const Topbooks = () => {
   return (
     <>
       <div>
         <div className="container py-10">
           {/* Header */}
-          <div className="text-center mb-20 max-w-[400px] mx-auto">
+          <motion.div
+            className="text-center mb-20 max-w-[400px] mx-auto"
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
             <p className="text-sm bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
               Best Books
             </p>
@@ -67,13 +75,21 @@ const Topbooks = () => {
               keislaman hingga solusi bisnis, kami memiliki koleksi yang beragam
               untuk memenuhi kebutuhan bacaan Anda.
             </p>
-          </div>
+          </motion.div>
           {/* Card */}
           <div className="py-10">
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 place-items-center gap-5">
-              {dataBuku.map((book) => {
+              {dataBuku.map((book, index) => {
+                const isEven = index % 2 === 0;
                 return (
-                  <div key={book.id} className="space-y-3">
+                  <motion.div
+                    key={book.id}
+                    className="space-y-3"
+                    initial={{ opacity: 0, y: isEven ? -50 : 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.2 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                  >
                     <img
                       src={book.image}
                       alt={book.title}
@@ -87,16 +103,24 @@ const Topbooks = () => {
                         <span>{book.rating}</span>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
             <div className="flex justify-center">
-              <button className="text-center mt-10 cursor-pointer bg-primary text-white py-2
-              px-5 rounded-full hover:scale-105 duration-300 hover:bg-white hover:text-primary hover:border hover:border-primary
-              dark:bg-secondary dark:text-white">
+              <motion.button
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true, amount: 0.5 }}
+                className="text-center mt-10 cursor-pointer bg-primary text-white py-2
+                px-5 rounded-full hover:scale-105 duration-300 hover:bg-white hover:text-primary hover:border hover:border-primary
+                dark:bg-secondary dark:text-white"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
                 View All Books
-              </button>
+              </motion.button>
             </div>
           </div>
         </div>
