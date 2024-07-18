@@ -32,7 +32,7 @@ const Banner = () => {
               />
             </div>
             {/* text image section */}
-            <div className="flex flex-col justify-center gap-6 sm:pt-0">
+            <div className="flex flex-col justify-center gap-6 sm:pt-0 mt-6">
               <motion.h1
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
