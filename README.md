@@ -36,4 +36,4 @@ Ajosh Book Shop adalah aplikasi toko buku online yang dibangun menggunakan React
 
 ## Kontribusi
 
-Jika Anda ingin berkontribusi pada proyek ini, silakan buat pull request atau buka issue untuk diskusi lebih lanjut.
+Jika Anda ingin berkontribusi pada proyek ini, silakan buat pull request atau buka issue untuk diskusi lebih lanjut.d
