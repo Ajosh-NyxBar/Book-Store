@@ -28,7 +28,7 @@ Ajosh Book Shop adalah aplikasi toko buku online yang dibangun menggunakan React
 3. Jalankan aplikasi dengan `npm run dev`.
 
 ## Struktur Proyek
-
+dd
 - `src/components`: Berisi komponen-komponen React yang digunakan dalam aplikasi.
 - `src/assets`: Berisi aset-aset seperti gambar dan ikon.
 - `src/index.css`: Berisi konfigurasi Tailwind CSS.
